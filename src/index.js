@@ -51,7 +51,7 @@ const questions = [
     message: "Please enter your project test instructions:",
     type: "input",
     name: "test",
-  },Description
+  },
   {
     message: "E-mail address:",
     type: "input",
@@ -95,18 +95,17 @@ const createMarkDownTemplate = (answers) => {
 
   ## Installation
 
-  `/`/`/
-
-  template string installation instructions here
-
-  `/`/`/
+  ` /
+    `/` /
+    `/` /
+    `/
 
   ## Usage
 
-  `/`/`/
-  template string usage here
-
-  `/`/`/
+  ` /
+    `/` /
+    `/` /
+    `/
 
   ## License
 
@@ -118,14 +117,26 @@ const createMarkDownTemplate = (answers) => {
 
   ## Tests
 
-  `/`/`/
-  template test instructions here
-  `/`/`/
+  ` /
+    `/` /
+    `/` /
+    `/
 
   ## Questions
 
   Please contact me on my email:
   template test email here
-  Visit my GitHub profile [here](template string email here)`
+  Visit my GitHub profile [here](template string email here)`;
 };
 
+// fn to write to readme markdown file
+const writeToReadMeFile = () => {
+  try {
+    // write data to file
+    fs.writeFileSync("./generatedReadme.md", "hello-from-index-js");
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+writeToReadMeFile();
