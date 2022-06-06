@@ -10,6 +10,14 @@ const questions = [
     message: "Please enter a title for your project",
     type: "input",
     name: "title",
+    // validate user to enter a title
+    validate: (enteredTitle) => {
+      if (enteredTitle) {
+        return true;
+      } else {
+        return "Please enter a title for your project to continue";
+      }
+    },
   },
   {
     message: "Please enter a description for your project",
@@ -29,14 +37,8 @@ const questions = [
   {
     message: "Please select a license from the options below",
     type: "list",
-    choices: [
-      "MIT license",
-      "GPLv2 license",
-      "Apache license",
-      "GPLv3 license",
-      "Other license",
-    ],
     name: "license",
+    choices: ["MIT", "GPLv2", "Apache", "GPLv3", "Other"],
   },
   {
     message: "Please enter the contribution guidelines your project",
@@ -48,15 +50,27 @@ const questions = [
     type: "input",
     name: "test",
   },
+  {
+    message: "E-mail address:",
+    type: "input",
+    name: "email",
+  },
+  {
+    message: "GitHub profile:",
+    type: "input",
+    name: "github",
+  },
 ];
 
-// fn to get answers using js sync
+// fn to prompt inquirer to generate questions and answers using sync js
 const getAnswers = async () => {
-  // display answers
+  // prompt questions and display answers
   const answers = await inquirer.prompt(questions);
-
-  console.log(answers);
+  // return answers
+  return answers;
 };
 
-// call fn to get answers
+// call fn to prompt questions
 getAnswers();
+
+const createMarkDown = () => {};
