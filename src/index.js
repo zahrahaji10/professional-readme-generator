@@ -1,6 +1,8 @@
 //IMPORTS
 // import inquirer into file
 const inquirer = require("inquirer");
+// import file system module into application
+const fs = require("fs");
 const { async } = require("rxjs");
 
 // DECLARATIONS
@@ -38,7 +40,7 @@ const questions = [
     message: "Please select a license from the options below",
     type: "list",
     name: "license",
-    choices: ["MIT", "GPLv2", "Apache", "GPLv3", "Other"],
+    choices: ["MIT", "GPLv2", "Apache", "GPLv3"],
   },
   {
     message: "Please enter the contribution guidelines your project",
@@ -49,7 +51,7 @@ const questions = [
     message: "Please enter your project test instructions:",
     type: "input",
     name: "test",
-  },
+  },Description
   {
     message: "E-mail address:",
     type: "input",
@@ -66,6 +68,7 @@ const questions = [
 const getAnswers = async () => {
   // prompt questions and display answers
   const answers = await inquirer.prompt(questions);
+  console.log(answers.title);
   // return answers
   return answers;
 };
@@ -73,4 +76,56 @@ const getAnswers = async () => {
 // call fn to prompt questions
 getAnswers();
 
-const createMarkDown = () => {};
+// fn to create the read me mark down
+const createMarkDownTemplate = (answers) => {
+  // use answers to template string into read me mark down
+  `# Project Title ![MIT]("https://img.shields.io/badge/MIT-License-green)MIT-License-green")
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Description
+
+  template string installation instructions here
+
+  ## Installation
+
+  `/`/`/
+
+  template string installation instructions here
+
+  `/`/`/
+
+  ## Usage
+
+  `/`/`/
+  template string usage here
+
+  `/`/`/
+
+  ## License
+
+  MIT License
+
+  ## Contributing
+
+  template string contributions here
+
+  ## Tests
+
+  `/`/`/
+  template test instructions here
+  `/`/`/
+
+  ## Questions
+
+  Please contact me on my email:
+  template test email here
+  Visit my GitHub profile [here](template string email here)`
+};
+
