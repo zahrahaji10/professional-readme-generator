@@ -26,6 +26,11 @@ nmp run start
 add screen shots
 add walk through video
 
-## Contact Me
+## Markdown Cheat Sheet
+
+- Link to cheat sheet [here](https://www.markdownguide.org/cheat-sheet)
+
+### Contact Me
 
 Email here
+GitHub profile [here](https://github.com/zahrahaji10)
