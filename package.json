@@ -19,5 +19,8 @@
   "homepage": "https://github.com/zahrahaji10/professional-readme-generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
