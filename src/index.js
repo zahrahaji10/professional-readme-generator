@@ -49,3 +49,14 @@ const questions = [
     name: "test",
   },
 ];
+
+// fn to get answers using js sync
+const getAnswers = async () => {
+  // display answers
+  const answers = await inquirer.prompt(questions);
+
+  console.log(answers);
+};
+
+// call fn to get answers
+getAnswers();
