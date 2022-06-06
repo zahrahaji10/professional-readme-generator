@@ -1,5 +1,15 @@
 # Professional README Generator
 
+## Table of Content
+
+- [Description](#description)
+- [Installation](#installation)
+- [Node Packages](#node-packages)
+- [Usage](#usage)
+- [User Journey](#user-journey)
+- [Markdown Cheat Sheet](#markdown-cheat-sheet)
+- [Contact Me](#contact-me)
+
 ## Description
 
 Created an README generator application which utilizes node to allow users to create professional README for their projects.
@@ -28,9 +38,10 @@ add walk through video
 
 ## Markdown Cheat Sheet
 
-- Link to cheat sheet [here](https://www.markdownguide.org/cheat-sheet)
+- Link to cheat sheet [Click Here](https://www.markdownguide.org/cheat-sheet)
 
 ### Contact Me
 
 Email here
-GitHub profile [here](https://github.com/zahrahaji10)
+
+- GitHub profile [click Here](https://github.com/zahrahaji10)
