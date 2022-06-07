@@ -57,4 +57,4 @@ This demonstrates the questions the user will be asked to generate the README fi
 
 - Personal E-mail : ludlow_10@hotmail.com
 
-- GitHub profile [click Here](https://github.com/zahrahaji10)
+- GitHub profile [Click Here](https://github.com/zahrahaji10)
