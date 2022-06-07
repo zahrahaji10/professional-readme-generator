@@ -58,85 +58,91 @@ const questions = [
     name: "email",
   },
   {
-    message: "GitHub profile:",
+    message: "GitHub profile username:",
     type: "input",
     name: "github",
   },
 ];
 
+// fn to create the read me mark down
+const createMarkDownTemplate = (answers) => {
+  // use answers to template string into read me mark down
+  const readMeTemplate = `# Project Title ![${answers.license}]("https://img.shields.io/badge/${answers.license}-License-green")
+  
+  ## Table of Contents
+        - [Description](#description)
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [License](#license)
+        - [Contributing](#contributing)
+        - [Tests](#tests)
+        - [Questions](#questions)
+
+  ## Description
+
+  ${answers.description}
+
+  ## Installation
+
+  \`\`\`
+
+  ${answers.installation}
+
+  \`\`\`
+
+
+  ## Usage
+
+  \`\`\`
+
+  ${answers.usage}
+
+   \`\`\`
+
+  ## License
+
+  ${answers.license} License
+
+  ## Contributing
+
+  ${answers.contributions}
+
+  ## Tests
+
+  \`\`\`
+
+  ${answers.test}
+
+  \`\`\`
+
+  ## Questions
+
+  Please contact me on my email: ${answers.email}
+
+  Visit my GitHub profile [here](https://github.com/${answers.github})`;
+  return readMeTemplate;
+};
+
 // fn to prompt inquirer to generate questions and answers using sync js
 const getAnswers = async () => {
   // prompt questions and display answers
   const answers = await inquirer.prompt(questions);
-  console.log(answers.title);
-  // return answers
-  return answers;
+  // declare a variable to store answers
+  const readMeAnswers = await createMarkDownTemplate(answers);
+  // write to read to file section to create read me after user inputs
+  writeToReadMeFile(readMeAnswers);
 };
 
 // call fn to prompt questions
 getAnswers();
 
-// fn to create the read me mark down
-const createMarkDownTemplate = (answers) => {
-  // use answers to template string into read me mark down
-  `# Project Title ![MIT]("https://img.shields.io/badge/MIT-License-green)MIT-License-green")
-  ## Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
-
-  ## Description
-
-  template string installation instructions here
-
-  ## Installation
-
-  ` /
-    `/` /
-    `/` /
-    `/
-
-  ## Usage
-
-  ` /
-    `/` /
-    `/` /
-    `/
-
-  ## License
-
-  MIT License
-
-  ## Contributing
-
-  template string contributions here
-
-  ## Tests
-
-  ` /
-    `/` /
-    `/` /
-    `/
-
-  ## Questions
-
-  Please contact me on my email:
-  template test email here
-  Visit my GitHub profile [here](template string email here)`;
-};
-
 // fn to write to readme markdown file
-const writeToReadMeFile = () => {
+const writeToReadMeFile = (data) => {
   try {
     // write data to file
-    fs.writeFileSync("./generatedReadme.md", "hello-from-index-js");
+    fs.writeFileSync("./generated-readme.md", data);
+    // display an error message if unable to write file
   } catch (error) {
     console.log(error.message);
   }
 };
-
-writeToReadMeFile();
