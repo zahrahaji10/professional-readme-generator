@@ -39,6 +39,16 @@ I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 ```
 
+### Over View
+
+<img width="521" alt="prompt-questions" src="https://user-images.githubusercontent.com/102627226/172484666-7bf64265-e521-4270-9334-14f1c9361a81.png">
+
+This demonstrates the questions the user will be asked to generate the README file for their project
+
+### Video Demonstration
+
+[Video](https://user-images.githubusercontent.com/102627226/172487988-cffc517e-b91e-4b82-84a6-d5224af018f0.mp4)
+
 ## Markdown Cheat Sheet
 
 - Link to cheat sheet [Click Here](https://www.markdownguide.org/cheat-sheet)
