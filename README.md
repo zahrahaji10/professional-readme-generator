@@ -4,8 +4,8 @@
 
 - [Description](#description)
 - [Installation](#installation)
-- [Node Packages](#node-packages)
 - [Usage](#usage)
+- [Node Packages](#node-packages)
 - [User Journey](#user-journey)
 - [Markdown Cheat Sheet](#markdown-cheat-sheet)
 - [Contact Me](#contact-me)
@@ -21,20 +21,23 @@ cd professional-readme-generator
 npm install
 ```
 
-## Node Packages
-
-- Link to inquirer: https://www.npmjs.com/package/inquirer
-
 ## Usage
 
 ```
 nmp run start
 ```
 
+## Node Packages
+
+- Link to inquirer: https://www.npmjs.com/package/inquirer
+
 ## User Journey
 
-add screen shots
-add walk through video
+```md
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
+```
 
 ## Markdown Cheat Sheet
 
@@ -42,6 +45,6 @@ add walk through video
 
 ### Contact Me
 
-Email here
+- Personal E-mail : ludlow_10@hotmail.com
 
 - GitHub profile [click Here](https://github.com/zahrahaji10)

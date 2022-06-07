@@ -3,7 +3,6 @@
 const inquirer = require("inquirer");
 // import file system module into application
 const fs = require("fs");
-const { async } = require("rxjs");
 
 // DECLARATIONS
 // question object array
@@ -110,7 +109,7 @@ const createMarkDownTemplate = (answers) => {
   ## Tests
 
   \`\`\`
-
+clear
   ${answers.test}
 
   \`\`\`
