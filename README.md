@@ -55,6 +55,6 @@ This demonstrates the questions the user will be asked to generate the README fi
 
 ### Contact Me
 
-- Personal E-mail : ludlow_10@hotmail.com
-
+- Personal E-mail : zahrahhaji10@gmail.com
+- Linkedin : [Click Here](https://www.linkedin.com/in/zahra-haji/)
 - GitHub profile [Click Here](https://github.com/zahrahaji10)
