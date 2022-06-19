@@ -16,7 +16,8 @@ Created an README generator application which utilizes node to allow users to cr
 
 ## Installation
 
-```git clone git@github.com:zahrahaji10/professional-readme-generator.git
+```
+git clone git@github.com:zahrahaji10/professional-readme-generator.git
 cd professional-readme-generator
 npm install
 ```
